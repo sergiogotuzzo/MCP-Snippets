@@ -1,8 +1,6 @@
 package client.mods.impl;
 
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.Collection;
 
 import org.lwjgl.opengl.GL11;
 
@@ -27,30 +25,28 @@ public class ModArmorStatus extends ModDraggable {
 	public void render(ScreenPosition pos) {
 		int i = 0;
 		
-		for (ItemStack itemStack : getPlayerInventory()) {
-			drawItemStack(pos, i, itemStack);
+		if (mc.thePlayer.inventory.getCurrentItem() != null) {
+			drawItemStack(pos, i, mc.thePlayer.inventory.getCurrentItem());
 			
 			i++;
+		}
+		
+		for (ItemStack itemStack : mc.thePlayer.inventory.armorInventory) {
+			if (itemStack != null) {
+				drawItemStack(pos, i, itemStack);
+				
+				i++;
+			}
 		}
 	}
 	
 	@Override
 	public void renderDummy(ScreenPosition pos) {
-		Collection<ItemStack> dummyPlayerInventory = new ArrayList<ItemStack>();
-
-		dummyPlayerInventory.add(new ItemStack(Items.diamond_sword));
-		dummyPlayerInventory.add(new ItemStack(Items.diamond_boots));
-		dummyPlayerInventory.add(new ItemStack(Items.diamond_leggings));
-		dummyPlayerInventory.add(new ItemStack(Items.diamond_chestplate));
-		dummyPlayerInventory.add(new ItemStack(Items.diamond_helmet));
-		
-		int i = 0;
-		
-		for (ItemStack itemStack : dummyPlayerInventory) {
-			drawItemStack(pos, i, itemStack);
-			
-			i++;
-		}
+		drawItemStack(pos, 0, new ItemStack(Items.diamond_sword));
+		drawItemStack(pos, 1, new ItemStack(Items.diamond_boots));
+		drawItemStack(pos, 2, new ItemStack(Items.diamond_leggings));
+		drawItemStack(pos, 3, new ItemStack(Items.diamond_chestplate));
+		drawItemStack(pos, 4, new ItemStack(Items.diamond_helmet));
 	}
 
 	private void drawItemStack(ScreenPosition pos, int i, ItemStack itemStack) {
@@ -75,21 +71,5 @@ public class ModArmorStatus extends ModDraggable {
 			
 			GL11.glPopMatrix();
 		}
-	}
-	
-	private Collection<ItemStack> getPlayerInventory() {
-		Collection<ItemStack> playerInventory = new ArrayList<ItemStack>();
-		
-		if (mc.thePlayer.inventory.getCurrentItem() != null) {
-			playerInventory.add(mc.thePlayer.inventory.getCurrentItem());
-		}
-		
-		for (ItemStack itemStack : mc.thePlayer.inventory.armorInventory) {
-			if (itemStack != null) {
-				playerInventory.add(itemStack);
-			}
-		}
-		
-		return playerInventory;
 	}
 }
