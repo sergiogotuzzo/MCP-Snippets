@@ -99,7 +99,7 @@ public class GuiPlayerTabOverlay extends Gui
             ++j4;
         }
 
-        boolean flag = !ModInstances.getTabOverlayMod().isEnabled() && ( this.mc.isIntegratedServerRunning() || this.mc.getNetHandler().getNetworkManager().getIsencrypted()) || ModInstances.getTabOverlayMod().isEnabled() && ModInstances.getTabOverlayMod().isPlayersHeadToggled();
+        boolean flag = !ModInstances.getTabOverlayMod().isEnabled() && (this.mc.isIntegratedServerRunning() || this.mc.getNetHandler().getNetworkManager().getIsencrypted()) || ModInstances.getTabOverlayMod().isEnabled() && ModInstances.getTabOverlayMod().isPlayersHeadToggled();
         int l;
 
         if (scoreObjectiveIn != null)
