@@ -9,7 +9,7 @@ The mods here are:
 - Particles: Affect always sharpness and choose the multiplier
 - Nametags: Show your own nametags in third person
 - Coordinates Display: Displays coordinates, biome and facing
-- Pack Display: Displays your current selected resource packs
+- Pack Display: Displays your current selected resource pack
 - Hurt Cam: Disable hurt shake or choose the hurt shake intensity
 - Tab Overlay: Edits the tab list
 - No Achievement Notifications: Hide the achievement notifications
