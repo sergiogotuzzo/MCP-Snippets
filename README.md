@@ -1,4 +1,4 @@
-All the mods here were written using MCP-919 and using Eric Golde's mod system.
+All the mods here were written using [MCP-919](https://github.com/Marcelektro/MCP-919) and using [Eric Golde](https://github.com/egold555)'s mod system.
 Every mod was written or improved by me.
 
 The mods here are:
