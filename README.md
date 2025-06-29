@@ -8,7 +8,7 @@ The mods here are:
 - (Fixed) Freelook: Fixed mouse sensitivity, pitch and nametags rotation
 - Hurt Cam: Disable hurt shake or choose the hurt shake intensity
 - Nametags: Show your own nametags in third person
-- No Achievement Notifications: Hide the achievement notifications
+- Hide Achievement Notifications: Hide the achievement notifications
 - Pack Display: Displays your current selected resource pack
 - Particles: Affect always sharpness and choose the multiplier
 - Potion Effects: Displays the current potion effects of the player starting from top
