@@ -13,7 +13,7 @@
     }
   ```
 
-- Choose the multiplier factor
+- Choose the multiplier factor:
   1. Press CTRL + RSHIFT + T and search for "EntityParticleEmitter.java"
   2. Press CTRL + F, search for "public void onUpdate()"
   3. Search for this line: for (int i = 0; i < 16; ++i)
